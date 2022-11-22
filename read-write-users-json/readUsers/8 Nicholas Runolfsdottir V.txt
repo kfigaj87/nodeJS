@@ -1,5 +1,5 @@
-name: undefined
-surname: Nicholas Runolfsdottir V
+name: Nicholas
+surname: Nicholas,Runolfsdottir,V
 street: Ellsworth Summit
 zipCode: 45169
 city: Aliyaview

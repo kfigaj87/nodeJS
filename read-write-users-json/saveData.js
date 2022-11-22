@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-function saveData(readFolder, readUsers) {
+function saveData(readFolder, readUsers, overwrite) {
   fs.readdir(path.join(__dirname, readFolder), function (err, files) {
     if (err) {
       console.log(err);
@@ -28,16 +28,29 @@ function saveData(readFolder, readUsers) {
             const users = JSON.parse(data);
 
             users.forEach(function (user) {
-              const fileContent = `name: ${user.name}\nsurname: ${user.name}\nstreet: ${user.address.street}\nzipCode: ${user.address.zipcode}\ncity: ${user.address.city}\nphone: ${user.phone}`;
+              const fileContent = `name: ${user.name.split(
+                " ",
+                1
+              )}\nsurname: ${user.name.split(" ")}\nstreet: ${
+                user.address.street
+              }\nzipCode: ${user.address.zipcode}\ncity: ${
+                user.address.city
+              }\nphone: ${user.phone}`;
 
               const fileName = `${user.name}`;
 
               fs.writeFile(
-                path.join(__dirname, "readUsers", user.id + fileName + ".txt"),
+                path.join(
+                  __dirname,
+                  "readUsers",
+                  user.id + " " + fileName + ".txt"
+                ),
                 fileContent,
+                { recursive: overwrite },
 
-                function (err) {
-                  if (err) {
+                function (err, overwrite) {
+                  if ((err, overwrite)) {
+                    fs.writeFile;
                     console.log(err);
                   } else {
                     console.log("Plik został utworzony");

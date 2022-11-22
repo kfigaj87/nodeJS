@@ -1,5 +1,5 @@
-name: undefined
-surname: Kurtis Weissnat
+name: Kurtis
+surname: Kurtis,Weissnat
 street: Rex Trail
 zipCode: 58804-1099
 city: Howemouth

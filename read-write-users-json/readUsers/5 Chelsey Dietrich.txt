@@ -1,5 +1,5 @@
-name: undefined
-surname: Chelsey Dietrich
+name: Chelsey
+surname: Chelsey,Dietrich
 street: Skiles Walks
 zipCode: 33263
 city: Roscoeview

@@ -1,5 +1,5 @@
-name: undefined
-surname: Glenna Reichert
+name: Glenna
+surname: Glenna,Reichert
 street: Dayna Park
 zipCode: 76495-3109
 city: Bartholomebury
