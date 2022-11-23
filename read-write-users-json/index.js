@@ -1,3 +1,3 @@
 const saveData = require("./saveData");
 
-saveData("data");
+saveData("data", "usersData", true);

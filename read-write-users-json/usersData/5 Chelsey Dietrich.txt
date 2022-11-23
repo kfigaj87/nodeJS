@@ -1,0 +1,6 @@
+name: Chelsey
+surname: Dietrich
+street: Skiles Walks
+zipCode: 33263
+city: Roscoeview
+phone: (254)954-1289

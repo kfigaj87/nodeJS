@@ -8,7 +8,7 @@ function saveData(readFolder, readUsers, overwrite) {
     } else {
       console.log(files);
 
-      fs.mkdir(path.join(__dirname, "readUsers"), function (err) {
+      fs.mkdir(path.join(__dirname, readUsers), function (err) {
         if (err) {
           if (err.code === "EEXIST") {
             console.log("Folder już istnieje");
@@ -28,21 +28,18 @@ function saveData(readFolder, readUsers, overwrite) {
             const users = JSON.parse(data);
 
             users.forEach(function (user) {
-              const fileContent = `name: ${user.name.split(
-                " ",
-                1
-              )}\nsurname: ${user.name.split(" ")}\nstreet: ${
-                user.address.street
-              }\nzipCode: ${user.address.zipcode}\ncity: ${
-                user.address.city
-              }\nphone: ${user.phone}`;
+              const fileContent = `name: ${user.name.split(" ")[0]}\nsurname: ${
+                user.name.split(" ")[1]
+              }\nstreet: ${user.address.street}\nzipCode: ${
+                user.address.zipcode
+              }\ncity: ${user.address.city}\nphone: ${user.phone}`;
 
               const fileName = `${user.name}`;
 
               fs.writeFile(
                 path.join(
                   __dirname,
-                  "readUsers",
+                  readUsers,
                   user.id + " " + fileName + ".txt"
                 ),
                 fileContent,
